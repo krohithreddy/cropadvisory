@@ -1,0 +1,121 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:paddingBottom="10dp"
+    card_view:cardBackgroundColor="#FFF"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="3dp">
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/card_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_margin="@dimen/card_margin"-->
+    <!--android:elevation="3dp"-->
+    <!--android:background="#FFF"-->
+    <!--card_view:cardCornerRadius="@dimen/card_album_radius">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF">
+
+        <FrameLayout
+            android:id="@+id/f1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bigimage" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/imageradius" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/f1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="0dp"
+
+            android:textColor="#3e3e3e"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="0dp"
+            android:textColor="#3e3e3e"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/count"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:layout_marginRight="15dp"
+                app:srcCompat="@drawable/normalstar" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="#3e3e3e"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+
+
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+
+                app:srcCompat="@drawable/delete" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--</android.support.v7.widget.CardView>-->
+
+</android.support.v7.widget.CardView>

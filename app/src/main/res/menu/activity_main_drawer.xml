@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/allcards"
+
+            android:icon="@drawable/allcards"
+            android:title="అన్ని కార్డులు"
+            android:checked="false"
+            />
+        <item
+            android:id="@+id/starred"
+            android:checked="false"
+            android:icon="@drawable/starredcards"
+            android:title="ఇష్టమైన" />
+        <item
+            android:id="@+id/deleted"
+            android:checked="false"
+            android:icon="@drawable/deletedcards"
+            android:title="తొలగించిన" />
+
+    </group>
+
+
+</menu>

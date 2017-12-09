@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "385916506206",
+    "firebase_url": "https://azistacsr.firebaseio.com",
+    "project_id": "azistacsr",
+    "storage_bucket": "azistacsr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385916506206:android:b1e95522530a073a",
+        "android_client_info": {
+          "package_name": "com.hhcl.cropadvisory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385916506206-acd3jsofemp9r7i2or18jpbqgpi8s8g9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUxoPrKm1SgN8Gp8R1uCY10URvPNUAwcM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
