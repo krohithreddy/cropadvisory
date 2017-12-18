@@ -57,7 +57,7 @@ public class Detailedfragment extends Fragment {
         }
 
         // Log.d("positionint2",value.toString());
-        tabLayout.setTabTextColors(Color.parseColor("#3e3e3e"), Color.parseColor("#d9535a"));
+        tabLayout.setTabTextColors(Color.parseColor("#3e3e3e"), Color.parseColor("#CE2932"));
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "ramabhadra.ttf");
         for (int i=0;i<tabLayout.getTabCount();i++){

@@ -39,6 +39,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import static android.content.Context.WINDOW_SERVICE;
 
@@ -59,7 +60,7 @@ public class NewsList extends android.support.v4.app.Fragment {
     private boolean isFragmentLoaded = true;
     Typeface font, datefont;
     int screenWidth, screenHeight;
-
+String finalString;
     Integer value;
 
     @Override
@@ -156,18 +157,28 @@ public class NewsList extends android.support.v4.app.Fragment {
             datetime.setAlpha(0.8f);
             String sdate = dataSet.get(listPosition).getTstamp();
             Log.d("sdate", sdate);
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm a", Locale.US);
+            SimpleDateFormat newFormat = new SimpleDateFormat("dd MMM yyyy hh:mm a",Locale.US);
             Date date = null;
             try {
                 date = (Date) formatter.parse(sdate);
+                Log.d("newtimestamp33", date.toString());
+                 finalString = newFormat.format(date);
+                Log.d("newtimestamp33", finalString);
+                if (finalString.equals(""))
+                {
+                    datetime.setText(dataSet.get(listPosition).getTstamp());
+                }else{
+                    datetime.setText(finalString);
+                }
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            SimpleDateFormat newFormat = new SimpleDateFormat("dd MMM yyyy hh:mm a");
-            String finalString = newFormat.format(date);
 
 
-            datetime.setText(finalString);
+
+
+
 
             textViewName.setText(dataSet.get(listPosition).getTt_name());
             textViewVersion.setText(dataSet.get(listPosition).getMsg());

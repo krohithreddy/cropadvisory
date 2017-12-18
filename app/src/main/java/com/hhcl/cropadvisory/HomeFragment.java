@@ -11,6 +11,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -96,7 +97,7 @@ public class HomeFragment extends Fragment {
     String s = "invisible";
     String longsele = "no";
     private ActionMode actionMode;
-    String formatedate;
+    String formatedate,finalString,ttstamp;
     ArrayList<DBModel> finalarray;
 
     @Override
@@ -255,18 +256,23 @@ public class HomeFragment extends Fragment {
                 // adapter.notifyDataSetChanged();
             }
             Log.d("newtimestamp2", dbmodel.get(listPosition).getTstamp());
-            String ttstamp = dataSet.get(listPosition).getTstamp();
+             ttstamp = dbmodel.get(listPosition).getTstamp();
 
             DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy hh:mm a");
-            Date date = null;
+
+            //Date date = null;
             try {
-                date = (Date) formatter.parse(ttstamp);
+               Date date = (Date)formatter.parse(ttstamp);
+                Log.d("newtimestamp33", date.toString());
+                DateFormat newFormat = new SimpleDateFormat("dd MMM yyyy hh:mm a", Locale.UK);
+                 finalString = newFormat.format(date);
+                Log.d("newtimestamp33", finalString);
+
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-            SimpleDateFormat newFormat = new SimpleDateFormat("dd-MMM-yyyy hh:mm a");
-            String finalString = newFormat.format(date);
-            Log.d("newtimestamp33", finalString);
+
+
 
 
         }
